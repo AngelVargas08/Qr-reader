@@ -35,8 +35,7 @@ class _HomePageBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    final uiProvider = context.watch<UiSelected>().selectedMenuOpt;
+final uiProvider = context.watch<UiSelected>().selectedMenuOpt;
     
     final curretIndex = uiProvider;
 

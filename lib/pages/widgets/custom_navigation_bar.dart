@@ -8,11 +8,11 @@ class CustomNavigationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final uiProvider = context.watch<UiSelected>();
-    final curretIndex = uiProvider.selectedMenuOpt;
+    final select = context.watch<UiSelected>();
+
     return BottomNavigationBar(
-      onTap: (int i) => uiProvider.selected(i),
-      currentIndex: curretIndex,
+      onTap: (int i) => select.selecteditem(i),
+      currentIndex: select.selected,
       elevation: 0,
       items: const [
       BottomNavigationBarItem(

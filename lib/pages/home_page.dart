@@ -5,6 +5,7 @@ import 'package:qr/pages/direction_page.dart';
 import 'package:qr/pages/history_maps.dart';
 import 'package:qr/pages/widgets/custom_navigation_bar.dart';
 import 'package:qr/pages/widgets/scan_button.dart';
+import 'package:qr/provider/db_provider.dart';
 import 'package:qr/provider/selected_navigation.dart';
 
 class HomePage extends StatelessWidget {
@@ -38,7 +39,7 @@ class _HomePageBody extends StatelessWidget {
 
     final selected = context.watch<UiSelected>().selected;
    
-
+      DBProvider.db.database;
       switch (selected) {
         case 0:
           return const HistoryMaps();

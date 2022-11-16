@@ -1,17 +1,18 @@
-
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 class UiSelected extends ChangeNotifier{
 
+  int _selected =0;
+  int get selected => _selected;
 
- int _selected = 0;
- int get selected => _selected;
+
+  void selectedItemNavigation(int i){
+    _selected = i;
+    notifyListeners();
+
+  }
 
 
- void selecteditem(int i){
-  _selected = i;
-  notifyListeners();
- }
 
 
 }

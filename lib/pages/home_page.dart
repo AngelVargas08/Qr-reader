@@ -35,19 +35,18 @@ class _HomePageBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-final uiProvider = context.watch<UiSelected>().selectedMenuOpt;
-    
-    final curretIndex = uiProvider;
 
-    switch(curretIndex){
-      case 0:
-      return const HistoryMaps();
-      case 1: 
-      return const DirectionPage();
+    final selected = context.watch<UiSelected>().selected;
+   
 
-      default:
+      switch (selected) {
+        case 0:
+          return const HistoryMaps();
+        case 1:
+          return const DirectionPage();  
+          
+        default:
         return const HistoryMaps();
-    }
-
+      }
   }
 }
